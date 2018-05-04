@@ -5,6 +5,7 @@ from sklearn import preprocessing,cross_validation,svm
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from matplotlib import style
+
 quandl.ApiConfig.api_key = 'iJonhB1g2rrufwqNVxUs'
 
 style.use('ggplot')
@@ -60,9 +61,9 @@ for i in forecast_set:
     next_unix += 86400
     df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
 
-df['Adj. Close'].plot()
-df['Forecast'].plot()
-plt.legend()
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.show()
+# df['Adj. Close'].plot()
+# df['Forecast'].plot()
+# plt.legend()
+# plt.xlabel('Date')
+# plt.ylabel('Price')
+# plt.show()
